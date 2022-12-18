@@ -18,14 +18,14 @@
 .column-row {
     display: flex;
     flex-wrap: wrap;
-    column-gap: @column-gap-s;
+    gap: @row-gap-s @column-gap-s;
 
     @media @screen-gt-s {
-        column-gap: @column-gap-m;
+        gap: @row-gap-m @column-gap-m;
     }
 
     @media @screen-gt-m {
-        column-gap: @column-gap-l;
+        gap: @row-gap-l @column-gap-l;
     }
 }
 
