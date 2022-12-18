@@ -1,0 +1,40 @@
+.service {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    @media @screen-gt-s {
+        column-gap: 10px;
+    }
+
+    @media @screen-gt-m {
+        column-gap: 30px;
+    }
+}
+
+.service__text {
+    height: 40px;
+
+    &_delivery,
+    &_support {
+        width: 210px;
+
+        @media @screen-gt-s {
+            width: 122px;
+        }
+    }
+
+    &_return {
+        width: 160px;
+    }
+}
+
+.service__icon {
+    width: 40px;
+    height: 40px;
+
+    @media @screen-gt-m {
+        width: 50px;
+        height: 50px;
+    }
+}
