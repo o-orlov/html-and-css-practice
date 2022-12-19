@@ -22,6 +22,7 @@ body {
 
 p {
   margin: 0;
+  font: 14px / 1.65 Arial, sans-serif;
 }
 
 .grid {
@@ -99,7 +100,15 @@ p {
   .column-row {
     gap: 50px 30px;
   }
+}
 
+@media (min-width: 768px) {
+  .column-row_footer {
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
   .column-row_footer {
     gap: 30px;
   }
@@ -557,6 +566,12 @@ p {
 @media (min-width: 768px) {
   .app-list {
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1000px) {
+  .app-list {
+    justify-content: flex-start;
   }
 }
 
