@@ -29,6 +29,12 @@
     }
 }
 
+.column-row_footer {
+    @media @screen-gt-m {
+        gap: 30px @column-gap-l;
+    }
+}
+
 .column_s-1 {
     width: calc(@column-width-s - @column-gap-s / 2);
 }
@@ -51,4 +57,12 @@
             width: @column-width-l * @value + @column-gap-l * (@value - 1);
         }
     })
+}
+
+.column-logo {
+    display: none;
+
+    @media @screen-gt-m {
+        display: block;
+    }
 }
