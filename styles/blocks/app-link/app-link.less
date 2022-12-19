@@ -1,0 +1,12 @@
+@app-icons: app-store, google-play;
+
+.app-link {
+    width: 140px;
+    height: 40px;
+
+    each(@app-icons, {
+        &_@{value} {
+            background-image: url('@{value}.svg');
+        }
+    })
+}
