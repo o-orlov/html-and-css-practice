@@ -1,0 +1,40 @@
+.footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #212122;
+    color: #999;
+
+    @media @screen-gt-s {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    @media @screen-gt-m {
+        padding-top: 40px;
+        padding-bottom: 35px;
+    }
+
+    &__line {
+        height: 1px;
+        margin-bottom: 15px;
+        background-color: #666;
+
+        @media @screen-gt-s {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__logo-container {
+        display: flex;
+    }
+
+    &__logo-splitter {
+        flex-grow: 1;
+    }
+
+    &__logo {
+        width: 46px;
+        height: 46px;
+        background-image: url('logo.svg');
+    }
+}

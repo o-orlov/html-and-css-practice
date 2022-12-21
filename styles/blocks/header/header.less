@@ -27,7 +27,7 @@
     }
 }
 
-@icons: search, profile, menu;
+@header-icons: search, profile, menu;
 
 .header-button-icon {
     background: none;
@@ -36,7 +36,7 @@
     height: 30px;
     color: #fff;
 
-    each(@icons, {
+    each(@header-icons, {
         &_@{value} {
             background-image: url('@{value}.svg');
         }

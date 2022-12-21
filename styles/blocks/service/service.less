@@ -1,0 +1,27 @@
+.service {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    @media @screen-gt-s {
+        column-gap: 10px;
+    }
+
+    @media @screen-gt-m {
+        column-gap: 30px;
+    }
+}
+
+.service__text {
+    max-width: 210px;
+}
+
+.service__icon {
+    width: 40px;
+    height: 40px;
+
+    @media @screen-gt-m {
+        width: 50px;
+        height: 50px;
+    }
+}

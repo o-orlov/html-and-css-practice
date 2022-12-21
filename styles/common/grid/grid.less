@@ -1,7 +1,7 @@
 .grid {
-    background-image: linear-gradient(to right, transparent @column-padding-s * 2, rgba(255, 0, 0, 0.1) 1px);
-    background-size: calc(@column-width-s + @column-padding-s);
-    background-position: -10px 0;
+    background-image: linear-gradient(to right, transparent @column-gap-s, rgba(255, 0, 0, 0.1) 1px);
+    background-size: calc(@column-gap-s + @column-width-s - @column-gap-s / 2);
+    background-position-x: -@column-gap-s;
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -16,18 +16,20 @@
     }
 
     @media @screen-gt-s {
-        background-image: linear-gradient(to right, transparent @column-padding-m * 2, rgba(255, 0, 0, 0.1) 1px);
-        background-size: @column-width-m auto;
-        background-position: -@column-padding-m 0;
-        width: @column-width-m * 6;
+        background-image: linear-gradient(to right, transparent @column-gap-m, rgba(255, 0, 0, 0.1) 1px);
+        background-size: @column-gap-m + @column-width-m;
+        background-position-x: -(@column-gap-m / 2);
+        width: (@column-width-m + @column-gap-m) * @column-count-m;
         left: 50%;
         right: auto;
         transform: translateX(-50%);
     }
 
     @media @screen-gt-m {
-        background-size: @column-width-l auto;
-        width: @column-width-l * 12;
+        background-image: linear-gradient(to right, transparent @column-gap-l, rgba(255, 0, 0, 0.1) 1px);
+        background-size: @column-gap-l + @column-width-l;
+        background-position-x: -(@column-gap-l / 2);
+        width: (@column-width-l + @column-gap-l) * @column-count-l;
     }
 }
 

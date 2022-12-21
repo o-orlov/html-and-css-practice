@@ -1,0 +1,12 @@
+@social-icons: facebook, twitter, vk, instagram;
+
+.social-link {
+    width: 36px;
+    height: 36px;
+
+    each(@social-icons, {
+        &_@{value} {
+            background-image: url('@{value}.svg');
+        }
+    })
+}
