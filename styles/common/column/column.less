@@ -39,12 +39,26 @@
     }
 }
 
+/* Узкий вариант страницы */
+.column_s-0 {
+    @media @screen-only-s {
+        display: none;
+    }
+}
+
 .column_s-1 {
     width: calc(@column-width-s - @column-gap-s / 2);
 }
 
 .column_s-2 {
     width: @column-width-s * 2;
+}
+
+/* Средний вариант страницы */
+.column_m-0 {
+    @media @screen-only-m {
+        display: none;
+    }
 }
 
 @media @screen-gt-s {
@@ -55,18 +69,17 @@
     })
 }
 
+/* Широкий вариант страницы */
+.column_l-0 {
+    @media @screen-only-l {
+        display: none;
+    }
+}
+
 @media @screen-gt-m {
     each(range(@column-count-l), {
         .column_l-@{value} {
             width: @column-width-l * @value + @column-gap-l * (@value - 1);
         }
     })
-}
-
-.column-logo {
-    display: none;
-
-    @media @screen-gt-m {
-        display: block;
-    }
 }
